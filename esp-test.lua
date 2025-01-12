@@ -2,6 +2,8 @@ local Players = game:GetService("Players"):GetChildren()
 local RunService = game:GetService("RunService")
 local highlight = Instance.new("Highlight")
 highlight.Name = "Highlight"
+highlight.FillColor = Color3.fromRGB(0, 255, 0)  -- Set the fill color to green
+highlight.OutlineColor = Color3.fromRGB(0, 255, 0)  -- Optionally set the outline color to green as well
 
 for i, v in pairs(Players) do
     repeat wait() until v.Character
@@ -39,5 +41,5 @@ RunService.Heartbeat:Connect(function()
             highlightClone.Name = "Highlight"
             task.wait()
         end
-end
+    end
 end)
